@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.ui.NotesLoginFragment"
+    android:background="#E6EBEC">
+
+    <View
+        android:id="@+id/backgroundContainer"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/login_background_rounded_blue"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/backgroundContainer"
+        android:layout_alignStart="@id/backgroundContainer"
+        android:layout_alignTop="@id/backgroundContainer"
+        android:layout_marginTop="62dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="@string/app_name"
+        android:textSize="26sp"
+        android:textColor="@color/white"
+        style="@style/TextAppearance.AppCompat.Body2"/>
+
+    <include
+        android:id="@+id/layoutLoginCard"
+        layout="@layout/login_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/textViewAppName"
+        android:background="@drawable/login_card_rounded_white"/>
+
+</RelativeLayout>

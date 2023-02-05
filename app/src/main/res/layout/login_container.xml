@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/login_card_rounded_white"
+    android:orientation="vertical"
+    android:id="@+id/loginCard">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textColor="#01B7F9"
+        android:text="LOGIN"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_gravity="start"
+        android:textColor="#01B7F9"
+        android:textStyle="bold"
+        android:text="Username"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_gravity="center"
+        android:inputType="textEmailAddress"
+        app:backgroundTint="#01B7F9"
+        android:textSize="16sp"
+        android:hint="Enter your Username"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_gravity="start"
+        android:textColor="#01B7F9"
+        android:textStyle="bold"
+        android:text="Password"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_gravity="center"
+        android:inputType="textPassword"
+        app:backgroundTint="#01B7F9"
+        android:textSize="16sp"
+        android:hint="Enter your password"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewForgotMyPassword"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="26dp"
+        android:padding="12dp"
+        android:textColor="#01B7F9"
+        android:textStyle="bold"
+        android:text="Forgot my password"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:backgroundTint="#01B7F9"
+        app:cornerRadius="999dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginEnd="86dp"
+        android:minHeight="56dp"
+        android:letterSpacing="0.03"
+        android:fontFamily="sans-serif-medium"
+        android:text="LOGIN"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewSingUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="70dp"
+        android:padding="12dp"
+        android:textAlignment="center"
+        android:textColor="#01B7F9"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold"
+        android:text="Sing up!"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
