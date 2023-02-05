@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "805091200336",
+    "project_id": "notes-app-96fd3",
+    "storage_bucket": "notes-app-96fd3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805091200336:android:65e6710863eb3a8f0c3055",
+        "android_client_info": {
+          "package_name": "com.lukita.notesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805091200336-cf56tst0npg8e82j965u51l9e5qc4jo7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lukita.notesapp",
+            "certificate_hash": "c1f405c3a05d2c81e078b550673124a55eee9476"
+          }
+        },
+        {
+          "client_id": "805091200336-6pvmu7ar761bnbav80q1m9ff3lvd4itn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhLZaHjm2Ir0nD0bI9Vz3zDfe6Bh6hRXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "805091200336-6pvmu7ar761bnbav80q1m9ff3lvd4itn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
