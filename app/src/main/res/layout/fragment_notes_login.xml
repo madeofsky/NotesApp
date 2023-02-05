@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.ui.NotesLoginFragment"
+    tools:context=".appenter.login.ui.NotesLoginFragment"
     android:background="#E6EBEC">
 
     <View

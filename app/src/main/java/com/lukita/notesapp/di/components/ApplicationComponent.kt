@@ -2,9 +2,9 @@ package com.lukita.notesapp.di.components
 
 import android.content.Context
 import com.lukita.notesapp.NotesApplication
+import com.lukita.notesapp.appenter.di.component.NotesAppEnterComponent
+import com.lukita.notesapp.appenter.di.component.NotesLoginComponent
 import com.lukita.notesapp.di.modules.ApplicationSubComponents
-import com.lukita.notesapp.login.di.component.NotesLoginComponent
-import com.lukita.notesapp.login.ui.NotesLoginActivity
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -19,6 +19,6 @@ interface ApplicationComponent {
     }
 
     fun inject(application: NotesApplication)
-    fun notesLoginComponent(): NotesLoginComponent.Factory
+    fun notesAppEnterComponent(): NotesAppEnterComponent.Factory
 
 }

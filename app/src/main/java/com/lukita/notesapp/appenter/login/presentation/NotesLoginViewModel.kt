@@ -1,7 +1,7 @@
-package com.lukita.notesapp.login.presentation
+package com.lukita.notesapp.appenter.login.presentation
 
 import androidx.lifecycle.ViewModel
-import com.lukita.notesapp.login.data.User
+import com.lukita.notesapp.appenter.login.data.User
 import javax.inject.Inject
 
 class NotesLoginViewModel @Inject constructor() : ViewModel() {

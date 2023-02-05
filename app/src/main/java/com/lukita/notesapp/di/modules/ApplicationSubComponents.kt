@@ -1,7 +1,7 @@
 package com.lukita.notesapp.di.modules
 
-import com.lukita.notesapp.login.di.component.NotesLoginComponent
+import com.lukita.notesapp.appenter.di.component.NotesAppEnterComponent
 import dagger.Module
 
-@Module(subcomponents = [NotesLoginComponent::class])
+@Module(subcomponents = [NotesAppEnterComponent::class])
 interface ApplicationSubComponents

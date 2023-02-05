@@ -1,4 +1,4 @@
-package com.lukita.notesapp.login.ui
+package com.lukita.notesapp.appenter.login.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.lukita.notesapp.appenter.NotesAppEnterActivity
 import com.lukita.notesapp.databinding.FragmentNotesLoginBinding
-import com.lukita.notesapp.login.data.User
-import com.lukita.notesapp.login.presentation.NotesLoginViewModel
+import com.lukita.notesapp.appenter.login.data.User
+import com.lukita.notesapp.appenter.login.presentation.NotesLoginViewModel
 import javax.inject.Inject
 
 class NotesLoginFragment : Fragment() {
@@ -19,7 +20,7 @@ class NotesLoginFragment : Fragment() {
     lateinit var viewModel: NotesLoginViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        (requireActivity() as NotesLoginActivity).activityComponent.inject(this)
+        (requireActivity() as NotesAppEnterActivity).activityComponent.notesLoginComponent().create().inject(this)
         binding = FragmentNotesLoginBinding.inflate(layoutInflater)
         return binding.root
     }

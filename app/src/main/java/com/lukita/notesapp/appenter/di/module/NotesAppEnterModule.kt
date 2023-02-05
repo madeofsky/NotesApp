@@ -1,9 +1,9 @@
-package com.lukita.notesapp.login.di.module
+package com.lukita.notesapp.appenter.di.module
 
 import dagger.Module
 
 @Module
-abstract class NotesLoginModule {
+abstract class NotesAppEnterModule {
     //Provide Firebase login related stuff
 
     companion object {
