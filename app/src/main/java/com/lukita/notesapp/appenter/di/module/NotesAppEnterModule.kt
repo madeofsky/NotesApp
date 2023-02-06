@@ -1,12 +1,14 @@
 package com.lukita.notesapp.appenter.di.module
 
+import com.google.firebase.auth.FirebaseAuth
 import dagger.Module
+import dagger.Provides
 
 @Module
-abstract class NotesAppEnterModule {
-    //Provide Firebase login related stuff
+class NotesAppEnterModule {
 
-    companion object {
-
+    @Provides
+    fun provideFirebaseAuth(): FirebaseAuth {
+        return FirebaseAuth.getInstance()
     }
 }

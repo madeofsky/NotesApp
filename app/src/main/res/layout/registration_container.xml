@@ -5,11 +5,11 @@
     android:layout_height="match_parent"
     app:cardCornerRadius="12dp"
     android:elevation="5dp"
-    android:id="@+id/loginCard">
+    android:id="@+id/registrationCard">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -17,13 +17,13 @@
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="78dp"
             android:layout_marginBottom="40dp"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:textSize="26sp"
             android:textColor="#01B7F9"
-            android:text="LOGIN"/>
+            android:text="REGISTER"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextAppearance.AppCompat.Caption"
@@ -33,7 +33,51 @@
             android:layout_gravity="start"
             android:textColor="#01B7F9"
             android:textStyle="bold"
-            android:text="Username"/>
+            android:text="Name"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_gravity="center"
+            android:inputType="textPersonName"
+            app:backgroundTint="#01B7F9"
+            android:textSize="16sp"
+            android:hint="Enter your full name"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_gravity="start"
+            android:textColor="#01B7F9"
+            android:textStyle="bold"
+            android:text="Mobile Number"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_gravity="center"
+            android:inputType="number"
+            app:backgroundTint="#01B7F9"
+            android:textSize="16sp"
+            android:hint="Enter your number"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_gravity="start"
+            android:textColor="#01B7F9"
+            android:textStyle="bold"
+            android:text="Email"/>
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editTextEmail"
@@ -69,20 +113,8 @@
             android:textSize="16sp"
             android:hint="Enter your password"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textViewForgotMyPassword"
-            style="@style/TextAppearance.AppCompat.Caption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginEnd="26dp"
-            android:padding="12dp"
-            android:textColor="#01B7F9"
-            android:textStyle="bold"
-            android:text="Forgot my password"/>
-
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonLogin"
+            android:id="@+id/buttonSingUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -100,10 +132,10 @@
             android:minHeight="56dp"
             android:letterSpacing="0.03"
             android:fontFamily="sans-serif-medium"
-            android:text="LOGIN"/>
+            android:text="SIGNUP"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textViewSingUp"
+            android:id="@+id/textViewSingIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -114,7 +146,7 @@
             android:textColor="#01B7F9"
             style="@style/TextAppearance.AppCompat.Body2"
             android:textStyle="bold"
-            android:text="Sing up!"/>
+            android:text="Already have an account? Sign In"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

@@ -1,26 +1,42 @@
 package com.lukita.notesapp.appenter.login.presentation
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.lukita.notesapp.appenter.login.data.User
+import androidx.lifecycle.viewModelScope
+import com.lukita.notesapp.appenter.domain.FirebaseResult
+import com.lukita.notesapp.appenter.domain.NotesLoginUseCase
+import com.lukita.notesapp.appenter.login.data.UserLoginInfo
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class NotesLoginViewModel @Inject constructor() : ViewModel() {
+sealed class NotesLoginEvents {
+    object SendUserToRegisterScreen : NotesLoginEvents()
+    object ShowErrorToast : NotesLoginEvents()
+    object SentUserToHomeScreen : NotesLoginEvents()
+}
+
+class NotesLoginViewModel @Inject constructor(
+    private val useCase: NotesLoginUseCase
+) : ViewModel() {
+
+    private val _loginEvents = MutableLiveData<NotesLoginEvents>()
+    val loginEvents: LiveData<NotesLoginEvents> get() = _loginEvents
 
     fun onForgotPasswordClick() {
-        TODO("Not yet implemented")
     }
 
-    fun onLoginClick(userInfo: User) {
-        TODO("Not yet implemented")
+    fun onLoginClick(userLoginInfoInfo: UserLoginInfo) {
+        viewModelScope.launch(Dispatchers.IO) {
+            when (useCase.loginUser(userLoginInfoInfo.username, userLoginInfoInfo.password)) {
+                is FirebaseResult.Failure -> _loginEvents.postValue(NotesLoginEvents.ShowErrorToast)
+                is FirebaseResult.Success -> _loginEvents.postValue(NotesLoginEvents.SentUserToHomeScreen)
+            }
+        }
     }
 
-    fun onSingUpClick() {
-        TODO("Not yet implemented")
+    fun onSignUpClick() {
+        _loginEvents.value = NotesLoginEvents.SendUserToRegisterScreen
     }
-
-    fun onViewCreated() {
-        TODO("Not yet implemented")
-    }
-
-    fun onResume() {}
 }
