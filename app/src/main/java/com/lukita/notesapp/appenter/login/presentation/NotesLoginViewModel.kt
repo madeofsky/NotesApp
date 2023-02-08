@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lukita.notesapp.appenter.domain.FirebaseResult
-import com.lukita.notesapp.appenter.domain.NotesLoginUseCase
+import com.lukita.notesapp.appenter.domain.FirebaseAuthUseCase
 import com.lukita.notesapp.appenter.login.data.UserLoginInfo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -18,7 +18,7 @@ sealed class NotesLoginEvents {
 }
 
 class NotesLoginViewModel @Inject constructor(
-    private val useCase: NotesLoginUseCase
+    private val useCase: FirebaseAuthUseCase
 ) : ViewModel() {
 
     private val _loginEvents = MutableLiveData<NotesLoginEvents>()

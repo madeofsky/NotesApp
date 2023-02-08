@@ -5,7 +5,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class NotesAppEnterModule {
+class FirebaseModule {
 
     @Provides
     fun provideFirebaseAuth(): FirebaseAuth {

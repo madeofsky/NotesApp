@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.lukita.notesapp.NotesApplication
 import com.lukita.notesapp.R
-import com.lukita.notesapp.appenter.di.component.NotesAppEnterComponent
+import com.lukita.notesapp.appenter.di.component.NotesAppEnterActivityComponent
 import com.lukita.notesapp.appenter.login.ui.NotesLoginFragment
 import com.lukita.notesapp.databinding.ActivityNotesAppLoginBinding
 
@@ -12,7 +12,7 @@ class NotesAppEnterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNotesAppLoginBinding
 
-    val activityComponent: NotesAppEnterComponent by lazy {
+    val activityComponent: NotesAppEnterActivityComponent by lazy {
         (application as NotesApplication).appComponent.notesAppEnterComponent().create()
     }
 

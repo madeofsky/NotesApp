@@ -13,7 +13,7 @@ sealed class FirebaseResult<out T> {
     data class Failure(val error: Throwable) : FirebaseResult<Nothing>()
 }
 
-class NotesLoginUseCase @Inject constructor(
+class FirebaseAuthUseCase @Inject constructor(
     private val firebaseAuth: FirebaseAuth
 ) {
 

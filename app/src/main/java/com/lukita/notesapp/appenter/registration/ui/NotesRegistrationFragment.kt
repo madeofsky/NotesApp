@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.lukita.notesapp.R
 import com.lukita.notesapp.appenter.NotesAppEnterActivity
@@ -14,6 +13,8 @@ import com.lukita.notesapp.appenter.registration.presentation.NotesRegistrationV
 import com.lukita.notesapp.appenter.registration.presentation.RegistrationEvents
 import com.lukita.notesapp.databinding.FragmentNotesRegistrationBinding
 import com.lukita.notesapp.utils.replaceFragment
+import com.lukita.notesapp.utils.showLongToast
+import com.lukita.notesapp.utils.showShortToast
 import javax.inject.Inject
 
 class NotesRegistrationFragment : Fragment() {
@@ -48,7 +49,7 @@ class NotesRegistrationFragment : Fragment() {
             if (email.isNotBlank() && password.isNotBlank()) viewModel.onRegisterClick(
                 UserRegistrationInfo(fullName, mobileNumber, email, password)
             )
-            else Toast.makeText(context, "Please, fill with your information to Register!", Toast.LENGTH_SHORT).show()
+            else requireContext().showShortToast("Please, fill with your information to Register!")
         }
     }
 
@@ -56,7 +57,7 @@ class NotesRegistrationFragment : Fragment() {
         viewModel.registrationEvents.observe(viewLifecycleOwner) { event ->
             when (event) {
                 is RegistrationEvents.SendUserToLoginScreen -> navigateToLoginFragment(event.user?.email)
-                RegistrationEvents.ShowErrorToast -> Toast.makeText(requireContext(), "Server Error", Toast.LENGTH_LONG).show()
+                RegistrationEvents.ShowErrorToast -> requireContext().showLongToast("Server Error")
             }
         }
     }

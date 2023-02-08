@@ -5,9 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".home.ui.NotesHomeFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        tools:itemCount="10"/>
 
 </FrameLayout>

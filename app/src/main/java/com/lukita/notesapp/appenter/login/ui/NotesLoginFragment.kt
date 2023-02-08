@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.lukita.notesapp.R
@@ -17,6 +16,7 @@ import com.lukita.notesapp.appenter.registration.ui.NotesRegistrationFragment
 import com.lukita.notesapp.databinding.FragmentNotesLoginBinding
 import com.lukita.notesapp.home.NotesHomeActivity
 import com.lukita.notesapp.utils.addFragment
+import com.lukita.notesapp.utils.showLongToast
 import com.lukita.notesapp.utils.startActivity
 import javax.inject.Inject
 
@@ -54,7 +54,7 @@ class NotesLoginFragment : Fragment() {
             val password = binding.layoutLoginCard.editTextPassword.text.toString()
 
             if (email.isNotBlank() && password.isNotBlank()) viewModel.onLoginClick(UserLoginInfo(email, password))
-            else Toast.makeText(context, "Please, fill with your information to Login!", Toast.LENGTH_SHORT).show()
+            else requireContext().showLongToast("Please, fill with your information to Login!")
         }
         binding.layoutLoginCard.textViewSingUp.setOnClickListener {
             viewModel.onSignUpClick()
@@ -69,7 +69,7 @@ class NotesLoginFragment : Fragment() {
                 }
                 NotesLoginEvents.SentUserToHomeScreen -> requireContext().startActivity(
                     NotesHomeActivity::class.java, Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                NotesLoginEvents.ShowErrorToast -> Toast.makeText(requireContext(), "Server Error", Toast.LENGTH_LONG).show()
+                NotesLoginEvents.ShowErrorToast -> requireContext().showLongToast("User not registered")
             }
         }
     }
